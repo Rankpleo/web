@@ -40,12 +40,27 @@ class DashboardController extends AbstractActionController
 		return new ViewModel();
 	}
 
-	public function contacto()
+	public function contactoAction()
 	{
 		return new ViewModel();
 	}
 
-	public function acercade()
+	public function acercadeAction()
+	{
+		return new ViewModel();
+	}
+
+	public function addcompanyAction()
+	{
+		return new ViewModel();
+	}
+
+	public function addpersonAction()
+	{
+		return new ViewModel();
+	}
+
+	public function searchAction()
 	{
 		return new ViewModel();
 	}
