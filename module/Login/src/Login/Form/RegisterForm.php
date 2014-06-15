@@ -28,10 +28,10 @@ class RegisterForm extends Form
 			'name' => 'txtPaterno',
 			'type' => 'Text',
 			'options' => array(
-				'label' => 'Apellido Paterno:',
+				'label' => 'Apellidos:',
 			),
 			'attributes' => array(
-				'placeholder' => 'Apellido Paterno',
+				'placeholder' => 'Apellidos',
 				'id' => 'txtPaterno',
 				'class' => 'form-control',
 				'required' => 'required',
@@ -42,10 +42,10 @@ class RegisterForm extends Form
 			'name' => 'txtEmail',
 			'type' => 'Text',
 			'options' => array(
-				'label' => 'Correo Electrónico:',
+				'label' => 'Correo electrónico:',
 			),
 			'attributes' => array(
-				'placeholder' => 'Correo Electrónico',
+				'placeholder' => 'Correo electrónico',
 				'id' => 'txtEmail',
 				'class' => 'form-control',
 				'required' => 'required',
