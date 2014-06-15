@@ -10,13 +10,25 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
+define('DB_NAME', $_ENV['OPENSHIFT_APP_NAME']);
+
+/** MySQL database username */
+define('DB_USER', $_ENV['OPENSHIFT_MYSQL_DB_USERNAME']);
+
+/** MySQL database password */
+define('DB_PASSWORD', $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD']);
+
+/** MySQL hostname */
+define('DB_HOST', $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT']);
+
+
 
 return array(
     'db' => array(
 		'driver' => 'Pdo',
-		'dsn' => 'mysql:dbname=php;'.getenv('OPENSHIFT_MYSQL_DB_HOST').':'.getenv('OPENSHIFT_MYSQL_DB_PORT').'/',
-		'username' => 'admin7kgInEq',
-		'passoword' => 'rLlefA4XhU7S',		
+		'dsn' => 'mysql:dbname=php;'.DB_HOST,
+		'username' => DB_USER,
+		'passoword' => DB_PASSWORD,		
 		'driver_options' => array(
 			PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
 		),
