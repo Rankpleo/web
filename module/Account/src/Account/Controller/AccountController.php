@@ -10,8 +10,21 @@ use \Exception;
 
 class AccountController extends AbstractActionController
 {
+    protected $groupTagTable;
+    
 	public function indexAction()
 	{
-		return new ViewModel();
+		return new ViewModel(array(
+            'tags' => $this->getGroupTagTable()->fetchAll()
+        ));
 	}
+    
+    public function getGroupTagTable()
+    {
+        if (!$this->groupTagTable) {
+            $sm = $this->getServiceLocator();
+            $this->groupTagTable = $sm->get('Application\Model\GroupTagTable');
+        }
+        return $this->groupTagTable;
+    }
 }

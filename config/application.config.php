@@ -11,7 +11,8 @@ return array(
         'Login',
         'Profile',
         'Review',
-        'Account'
+        'Account',
+        'Dashboard'
     ),
     'module_listener_options' => array(
         'module_paths' => array(
