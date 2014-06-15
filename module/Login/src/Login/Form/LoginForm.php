@@ -17,7 +17,7 @@ class LoginForm extends Form
 				'label' => 'Correo Electrónico:',
 			),
 			'attributes' => array(
-				'placeholder' => 'Correo Electrónico',
+				//'placeholder' => 'Correo Electrónico',
 				'id' => 'txtEmail',
 				'class' => 'form-control',
 				'required' => 'required',
@@ -31,7 +31,7 @@ class LoginForm extends Form
 				'label' => 'Contraseña:',
 			),
 			'attributes' => array(
-				'placeholder' => 'Contraseña',
+				//'placeholder' => 'Contraseña',
 				'id' => 'txtPass',
 				'class' => 'form-control',
 				'required' => 'required',
