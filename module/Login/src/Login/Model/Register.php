@@ -6,7 +6,7 @@ use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\InputFilterAwareInterface;
 use Zend\InputFilter\InputFilterInterface;
 
-class Login
+class Register
 {
 	protected $inputFilter;
 
@@ -79,7 +79,64 @@ class Login
 			));
 
 			$inputFilter->add(array(
+				'name'     => 'txtName',
+				'required' => true,
+				'filters'  => array(
+					array('name' => 'StripTags'),
+					array('name' => 'StringTrim'),
+				),
+				'validators' => array(
+					array(
+						'name' => 'NotEmpty',
+						'options' => array(
+							'messages' => array( 
+								\Zend\Validator\NotEmpty::IS_EMPTY => $this->getMessage("IS_EMPTY"),
+							),
+						),
+					),
+				),
+			));
+            
+            $inputFilter->add(array(
+				'name'     => 'txtPaterno',
+				'required' => true,
+				'filters'  => array(
+					array('name' => 'StripTags'),
+					array('name' => 'StringTrim'),
+				),
+				'validators' => array(
+					array(
+						'name' => 'NotEmpty',
+						'options' => array(
+							'messages' => array( 
+								\Zend\Validator\NotEmpty::IS_EMPTY => $this->getMessage("IS_EMPTY"),
+							),
+						),
+					),
+				),
+			));
+            
+            $inputFilter->add(array(
 				'name'     => 'txtPass',
+				'required' => true,
+				'filters'  => array(
+					array('name' => 'StripTags'),
+					array('name' => 'StringTrim'),
+				),
+				'validators' => array(
+					array(
+						'name' => 'NotEmpty',
+						'options' => array(
+							'messages' => array( 
+								\Zend\Validator\NotEmpty::IS_EMPTY => $this->getMessage("IS_EMPTY"),
+							),
+						),
+					),
+				),
+			));
+            
+            $inputFilter->add(array(
+				'name'     => 'txtConfirmPass',
 				'required' => true,
 				'filters'  => array(
 					array('name' => 'StripTags'),

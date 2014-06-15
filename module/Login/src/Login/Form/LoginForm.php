@@ -11,14 +11,14 @@ class LoginForm extends Form
 		parent::__construct('frmLogin');
 
 		$this->add(array(
-			'name' => 'txtUser',
+			'name' => 'txtEmail',
 			'type' => 'Text',
 			'options' => array(
-				'label' => 'Usuario:',
+				'label' => 'Correo Electrónico:',
 			),
 			'attributes' => array(
-				'placeholder' => 'Usuario',
-				'id' => 'txtUser',
+				'placeholder' => 'Correo Electrónico',
+				'id' => 'txtEmail',
 				'class' => 'form-control',
 				'required' => 'required',
 			),
