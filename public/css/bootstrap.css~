@@ -2296,6 +2296,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary {
   color: #ffffff;
   background-color: #428bca;
+  border-color: #357ebd;
 }
 
 .btn-primary:hover,
