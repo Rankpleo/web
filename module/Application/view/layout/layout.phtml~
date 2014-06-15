@@ -27,7 +27,7 @@
     </head>
     <body>
     	<?php include_once($this->basePath() . '/analyticstracking.php'); ?>
-        <nav class="navbar navbar-fixed-top" role="navigation">
+        <nav class="navbar" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -52,14 +52,16 @@
 	    <?php echo $this->content; ?>
 	   
 	</div> <!-- /container -->
-	<div class="container"> 
-		<div class="row">
-			<div class="col-md-3 column"><a href="#">Aviso de privacidad</a></div>
-			<div class="col-md-3 column"><a href="#">Terminos y Condiciones</a></div>
-			<div class="col-md-3 column"><a href="#">Contacto</a></div>
-			<div class="col-md-3 column"><a href="#">Acerca de</a></div>
-		</div>		
-        </div>
+	<footer>
+		<div class="container center-block"> 
+			<div class="row"> 
+				<div class="col-md-3 column"><a href="#">Aviso de privacidad</a></div>
+				<div class="col-md-3 column"><a href="#">Terminos y Condiciones</a></div>
+				<div class="col-md-3 column"><a href="#">Contacto</a></div>
+				<div class="col-md-3 column"><a href="#">Acerca de</a></div>
+			</div>		
+		</div>
+	</footer>
         <?php echo $this->inlineScript() ?>
     </body>
 </html>
