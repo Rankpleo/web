@@ -17,7 +17,7 @@ class RegisterForm extends Form
 				'label' => 'Nombre(s):',
 			),
 			'attributes' => array(
-				'placeholder' => 'Nombre(s)',
+				//'placeholder' => 'Nombre(s)',
 				'id' => 'txtEmail',
 				'class' => 'form-control',
 				'required' => 'required',
@@ -31,7 +31,7 @@ class RegisterForm extends Form
 				'label' => 'Apellidos:',
 			),
 			'attributes' => array(
-				'placeholder' => 'Apellidos',
+				//'placeholder' => 'Apellidos',
 				'id' => 'txtPaterno',
 				'class' => 'form-control',
 				'required' => 'required',
@@ -45,7 +45,7 @@ class RegisterForm extends Form
 				'label' => 'Correo electrónico:',
 			),
 			'attributes' => array(
-				'placeholder' => 'Correo electrónico',
+				//'placeholder' => 'Correo electrónico',
 				'id' => 'txtEmail',
 				'class' => 'form-control',
 				'required' => 'required',
@@ -59,7 +59,7 @@ class RegisterForm extends Form
 				'label' => 'Contraseña:',
 			),
 			'attributes' => array(
-				'placeholder' => 'Contraseña',
+				//'placeholder' => 'Contraseña',
 				'id' => 'txtPass',
 				'class' => 'form-control',
 				'required' => 'required',
@@ -73,7 +73,7 @@ class RegisterForm extends Form
 				'label' => 'Confirmar Contraseña:',
 			),
 			'attributes' => array(
-				'placeholder' => 'Confirmar Contraseña',
+				//'placeholder' => 'Confirmar Contraseña',
 				'id' => 'txtConfirmPass',
 				'class' => 'form-control',
 				'required' => 'required',
