@@ -1,43 +1,68 @@
-<h2>Agregar empresa</h2>
-<form role="form">
-	<div class="form-group">
-		<label for="name">Nombre</label>
-		<input id="name" class="form-control" type="textbox" />
-	</div>
-	<div class="form-group">
-		 <label for="address">Domicilio</label>
-		 <input id="address" class="form-control" type="textbox" />
-	</div>
-	<div class="form-group">
-		 <label for="city">Ciudad</label>
-		 <input id="city" class="form-control" type="textbox" />
-	</div>
-	<div class="form-group">
-		 <label for="state">Estado</label>
-		 <input id="state" class="form-control" type="textbox" />
-	</div>
-	<div class="form-group">
-		 <label for="address">Domicilio</label>
-		 <input id="address" class="form-control" type="textbox" />
-	</div>
-	<div class="form-group">
-		 <label for="categoria">Categor&iacute;a</label><input id="categoria" type="textbos" />		
-	</div>
-	<div class="form-group">
-		<label for="image">Agregar foto</label><input id="image" type="file" />
-			<p class="help-block">
-						Agregar imagen
-			</p>
-	</div>
-	<button class="btn btn-default" type="submit">Guardar</button>
-</form>
+<?php 
+	if(count($resultado) == 0) :
+?>
 
-
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			 <a id="modal-383651" class="btn" role="button" href="#modal-container-383651" data-toggle="modal">Agregar empresa</a>
+			
+			<div aria-hidden="true" id="modal-container-383651" class="modal fade" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							 <button aria-hidden="true" class="close" type="button" data-dismiss="modal">×</button>
+							<h4 id="myModalLabel" class="modal-title">
+								Agregar empresa
+							</h4>
+						</div>
+						<div class="modal-body">
+							<form role="form">
+								<div class="form-group">
+									<label for="name">Nombre</label>
+									<input id="name" class="form-control" type="textbox" />
+								</div>
+								<div class="form-group">
+									 <label for="address">Domicilio</label>
+									 <input id="address" class="form-control" type="textbox" />
+								</div>
+								<div class="form-group">
+									 <label for="city">Ciudad</label>
+									 <input id="city" class="form-control" type="textbox" />
+								</div>
+								<div class="form-group">
+									 <label for="state">Estado</label>
+									 <input id="state" class="form-control" type="textbox" />
+								</div>
+								<div class="form-group">
+									 <label for="address">Domicilio</label>
+									 <input id="address" class="form-control" type="textbox" />
+								</div>
+								<div class="form-group">
+									 <label for="categoria">Categor&iacute;a</label><input id="categoria" type="textbos" />		
+								</div>
+								<!--<div class="form-group">
+									<label for="image">Agregar foto</label><input id="image" type="file" />
+										<p class="help-block">
+													Agregar imagen
+										</p>
+								</div>-->
+								<button class="btn btn-default" type="submit">Guardar</button>
+							</form>
+						</div>
+						<div class="modal-footer">
+							 <button class="btn btn-default" type="button" data-dismiss="modal">Cerrar</button> 
+							 <button class="btn btn-primary" type="button">Guardar los cambios</button>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</div>
 <?php
-
-    echo count($resultado);
-
-    foreach($resultado as $res)
-    {
-        print_r($res);
-    }
+	endif;
+?>	
