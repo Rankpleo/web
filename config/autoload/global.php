@@ -23,7 +23,7 @@ return array(
 		'driver' => 'Pdo',
 		'dsn' => $dsn,
 		'username' => 'admin7kgInEq',
-		'passoword' => 'rLlefA4XhU7S',		
+		'password' => 'rLlefA4XhU7S',		
 		'driver_options' => array(
 			PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
 		),
