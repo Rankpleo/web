@@ -1,0 +1,40 @@
+<?php
+	$form->setAttribute('action', $this->url('login', array('action' => 'index')));
+	$form->prepare();
+
+	echo $this->form()->openTag($form);
+?>
+
+<div class="row clearfix">
+	<div class="col-md-4 column">
+	</div>
+	<div class="col-md-4 column">
+		<span class="text-center">
+		</span>
+		<div class="panel panel-default">
+			<div class="panel-heading" style="text-align: center;">
+				<h3 class="panel-title">Control de Acesso</h3>
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<?php echo $this->formRow($form->get('txtUser')); ?>
+				</div>
+				<div class="form-group">
+					<?php echo $this->formRow($form->get('txtPass')); ?>
+				</div>
+			</div>
+			<div class="panel-footer text-center">
+				<button class="btn btn-default btn-lg btn-block"><span class="glyphicon glyphicon-lock"></span>&nbsp;&nbsp;&nbsp;Entrar</button>
+			</div>
+			<center>
+				<p style="color: red;"><?php echo $this->message; ?></p>
+			</center>
+		</div>
+	</div>
+	<div class="col-md-4 column">
+	</div>
+</div>
+
+<?php
+
+	echo $this->form()->closeTag();
