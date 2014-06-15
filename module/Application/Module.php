@@ -45,6 +45,12 @@ use Application\Model\ReviewTable;
 use Application\Model\Tag;
 use Application\Model\TagTable;
 
+use Application\Model\GlobalRating;
+use Application\Model\GlobalRatingTable;
+
+use Application\Model\MoreComments;
+use Application\Model\MoreCommentsTable;
+
 use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;
 
@@ -197,6 +203,28 @@ class Module
                         $resultSetPrototype = new ResultSet();
                         $resultSetPrototype->setArrayObjectPrototype(new Tag());
                         return new TableGateway('Tag', $dbAdapter, null, $resultSetPrototype);
+                    },
+                    'Application\Model\GlobalRatingTable' =>  function($sm) {
+                        $tableGateway = $sm->get('GlobalRatingTableGateway');
+                        $table = new GlobalRatingTable($tableGateway);
+                        return $table;
+                    },
+                    'GlobalRatingTableGateway' => function ($sm) {
+                        $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
+                        $resultSetPrototype = new ResultSet();
+                        $resultSetPrototype->setArrayObjectPrototype(new GlobalRating());
+                        return new TableGateway('GlobalRating', $dbAdapter, null, $resultSetPrototype);
+                    },
+                    'Application\Model\MoreCommentsTable' =>  function($sm) {
+                        $tableGateway = $sm->get('MoreCommentsTableGateway');
+                        $table = new MoreCommentsTable($tableGateway);
+                        return $table;
+                    },
+                    'MoreCommentsTableGateway' => function ($sm) {
+                        $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
+                        $resultSetPrototype = new ResultSet();
+                        $resultSetPrototype->setArrayObjectPrototype(new MoreComments());
+                        return new TableGateway('MoreComments', $dbAdapter, null, $resultSetPrototype);
                     },
                 ),
             );
