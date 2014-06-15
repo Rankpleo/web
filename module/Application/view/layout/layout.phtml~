@@ -49,14 +49,14 @@
 	    <?php echo $this->content; ?>
 	   
 	</div> <!-- /container -->
-	 <footer>
+	<div class="container"> 
 		<div class="row clearfix">
 			<div class="col-md-3 column"><a href="#">Aviso de privacidad</a></div>
 			<div class="col-md-3 column"><a href="#">Terminos y Condiciones</a></div>
 			<div class="col-md-3 column"><a href="#">Contacto</a></div>
 			<div class="col-md-3 column"><a href="#">Acerca de</a></div>
 		</div>		
-        </footer>
+        </div>
         <?php echo $this->inlineScript() ?>
     </body>
 </html>
