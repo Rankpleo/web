@@ -29,4 +29,24 @@ class DashboardController extends AbstractActionController
 	{
 		return new ViewModel();
 	}
+
+	public function privacidadAction()
+	{
+		return new ViewModel();
+	}
+
+	public function condicionesAction()
+	{
+		return new ViewModel();
+	}
+
+	public function contacto()
+	{
+		return new ViewModel();
+	}
+
+	public function acercade()
+	{
+		return new ViewModel();
+	}
 }
