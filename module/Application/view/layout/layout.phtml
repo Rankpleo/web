@@ -37,14 +37,13 @@
                     </button>
                     <a class="navbar-brand" href="<?php echo $this->url('home') ?>"><img src="<?php echo $this->basePath('img/logo_rankpleo.png') ?>" alt="Rankpleo" width="140" height="123" /></a>
                 </div>
-                <div class="collapse navbar-collapse pull-right">
-                    <ul class="nav navbar-nav">
-			<li><a href="<?php echo $this->url('home') ?>" class="btn btn-primary">Inicio</a></li>
-			<li><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">M&aacute;s comentados</a></li>
-			<li><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">Mejor calificados</a></li>
-			<li><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">Mapa</a></li>
-			<li><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">Entrar</a></li>
-                    </ul>
+		<div class="collapse navbar-collapse pull-right">
+			<div class="row clearfix">
+				<div class="col-md-2 column"><a href="<?php echo $this->url('home') ?>" class="btn btn-primary">Inicio</a></div>
+				<div class="col-md-2 column"><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">M&aacute;s comentados</a></div>
+				<div class="col-md-2 column"><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">Mejor calificados</a></div>
+				<div class="col-md-2 column"><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">Mapa</a></div>
+			</div>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>

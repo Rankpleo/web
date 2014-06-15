@@ -39,11 +39,11 @@
                 </div>
                 <div class="collapse navbar-collapse pull-right">
                     <ul class="nav navbar-nav">
-			<li class="active"><a href="<?php echo $this->url('home') ?>">Inicio</a></li>
-			<li><a href="<?php echo $this->url('login') ?>">M&aacute;s comentados</a></li>
-			<li><a href="<?php echo $this->url('login') ?>">Mejor calificados</a></li>
-			<li><a href="<?php echo $this->url('login') ?>">Mapa</a></li>
-			<li><a href="<?php echo $this->url('login') ?>">Entrar</a></li>
+			<li><a href="<?php echo $this->url('home') ?>" class="btn btn-primary">Inicio</a></li>
+			<li><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">M&aacute;s comentados</a></li>
+			<li><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">Mejor calificados</a></li>
+			<li><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">Mapa</a></li>
+			<li><a href="<?php echo $this->url('login') ?>" class="btn btn-primary">Entrar</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
