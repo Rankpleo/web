@@ -14,7 +14,7 @@
 return array(
     'db' => array(
 		'driver' => 'Pdo',
-		'dsn' => 'mysql:dbname=php;host=$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/',
+		'dsn' => 'mysql:dbname=php;'.getenv('OPENSHIFT_MYSQL_DB_HOST').':'.getenv('OPENSHIFT_MYSQL_DB_PORT').'/',
 		'username' => 'admin7kgInEq',
 		'passoword' => 'rLlefA4XhU7S',
 		'dsn' => 'mysql:dbname=php;host=127.11.241.130',
