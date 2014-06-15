@@ -6454,11 +6454,13 @@ button.close {
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {
   left: 50%;
+  top: 80%;
 }
 
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-right {
   right: 50%;
+  top: 80%;
 }
 
 .carousel-control .icon-prev,
