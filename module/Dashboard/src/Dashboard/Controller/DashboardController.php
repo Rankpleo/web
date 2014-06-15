@@ -10,6 +10,8 @@ use \Exception;
 
 class DashboardController extends AbstractActionController
 {
+    protected $globalRatingTable;
+    
 	public function indexAction()
 	{
 		return new ViewModel();
@@ -61,7 +63,18 @@ class DashboardController extends AbstractActionController
 	}
 
 	public function searchAction()
-	{
-		return new ViewModel();
+	{        
+		return new ViewModel(array(
+            'resultado' => $this->getGlobalRatingTable()->fetchAll()
+        ));
 	}
+    
+    public function getGlobalRatingTable()
+    {
+        if (!$this->globalRatingTable) {
+            $sm = $this->getServiceLocator();
+            $this->globalRatingTable = $sm->get('Application\Model\GlobalRatingTable');
+        }
+        return $this->globalRatingTable;
+    }
 }

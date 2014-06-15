@@ -22,11 +22,7 @@ class GlobalRatingTable
      public function getGlobalRating($id)
      {
          $id  = (int) $id;
-         $rowset = $this->tableGateway->select(array('$idCompany' => $id));
-         $row = $rowset->current();
-         if (!$row) {
-             throw new \Exception("Could not find row $id");
-         }
-         return $row;
+         $resultSet = $this->tableGateway->select(array('$idCompany' => $id));
+         return $resultSet;
      }
 }
