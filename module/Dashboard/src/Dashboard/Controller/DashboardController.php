@@ -63,7 +63,8 @@ class DashboardController extends AbstractActionController
 	}
 
 	public function searchAction()
-	{        
+	{   
+
 		return new ViewModel(array(
             'resultado' => $this->getGlobalRatingTable()->fetchAll()
         ));
