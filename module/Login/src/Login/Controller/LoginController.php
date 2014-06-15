@@ -6,12 +6,44 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\View\Model\JsonModel;
 
+use Login\Model\Login;
+
+use Login\Form\LoginForm;
+
+use Zend\Session\Container;
+
 use \Exception;
 
 class LoginController extends AbstractActionController
 {
 	public function indexAction()
 	{
-		return new ViewModel();
+		$form = new LoginForm();
+
+		$request = $this->getRequest();
+		
+		if ($request->isPost())
+		{
+			$post = $request->getPost();
+
+			$login = new Login();
+
+			$form->setInputFilter($login->getInputFilter());
+			$form->setData($post);
+
+			if ($form->isValid())
+			{
+				try
+				{
+
+				}
+				catch(\Exception $ex)
+				{
+
+				}
+			}
+		}
+
+		return array('form' => $form);
 	}
 }
