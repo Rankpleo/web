@@ -30,7 +30,7 @@
 				<p style="color: red;"><?php echo $this->message; ?></p>
 			</center>
 			<div class="panel-footer text-center">
-				<button class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;Crear una cuenta</button>
+				<button class="btn btn-success btn-lg btn-block" onclick="location.href='register'"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;Crear una cuenta</button>
 			</div>
 		</div>
 	</div>	
@@ -38,5 +38,8 @@
 <br><br>
 
 <?php
+    if(isset($this->datos))
+        print_r($this->datos);
+
 
 	echo $this->form()->closeTag();
