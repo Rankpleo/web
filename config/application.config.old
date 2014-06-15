@@ -10,7 +10,8 @@ return array(
         'Application',
         'Login',
         'Profile',
-        'Review'
+        'Review',
+        'Account'
     ),
     'module_listener_options' => array(
         'module_paths' => array(

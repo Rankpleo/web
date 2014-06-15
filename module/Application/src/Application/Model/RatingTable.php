@@ -36,6 +36,7 @@ class RatingTable
              'idRating' => $object->idRating,
              'valueAssigned'  => $object->valueAssigned,
              'idReview'  => $object->idReview,
+             'idAspect' => $object->idAspect,
          );
 
          $id = (int) $object->idRating;

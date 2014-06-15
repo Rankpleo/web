@@ -45,6 +45,9 @@ use Application\Model\ReviewTable;
 use Application\Model\Tag;
 use Application\Model\TagTable;
 
+use Zend\Db\ResultSet\ResultSet;
+use Zend\Db\TableGateway\TableGateway;
+
 class Module
 {
     public function onBootstrap(MvcEvent $e)
