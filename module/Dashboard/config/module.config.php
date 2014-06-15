@@ -11,7 +11,7 @@ return array(
 			'dashboard' => array(
 				'type'    => 'segment',
 				'options' => array(
-					'route'    => '/dashboard[/][:action][/]',
+					'route'    => '/dashboard[/][:action]',
                     'constraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                     ),

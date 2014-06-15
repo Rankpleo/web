@@ -64,8 +64,13 @@ class LoginController extends AbstractActionController
                     $datos = new ViewModel($results);
                   /*  print_r($datos->getVariables()[0]);*/
                     if(isset($datos->getVariables()[0]["idProfile"]))
+                    {
+                        $user_session = new Container('user');
+				        $user_session->idProfile = $datos->getVariables()[0]["idProfile"];
+                    
                         return $this->redirect()->toRoute('dashboard', array('action' => 'index'));
-                    else
+                    }
+                        else
                         return array('form' => $form, 'message' => 'Usuario y/o contraseña incorretos');
                     
                    

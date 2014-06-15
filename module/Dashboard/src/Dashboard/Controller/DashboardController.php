@@ -8,12 +8,20 @@ use Zend\View\Model\JsonModel;
 
 use \Exception;
 
+use Zend\Session\Container;
+
 class DashboardController extends AbstractActionController
 {
     protected $globalRatingTable;
     
 	public function indexAction()
 	{
+        $user_session = new Container('user');
+        if(!isset( $user_session->idProfile))
+        {
+            return $this->redirect()->toRoute('login', array('action' => 'index'));
+        
+}
 		return new ViewModel();
 	}
 
@@ -24,11 +32,23 @@ class DashboardController extends AbstractActionController
 
 	public function commentsAction()
 	{
+        $user_session = new Container('user');
+        if(!isset( $user_session->idProfile))
+        {
+            return $this->redirect()->toRoute('login', array('action' => 'index'));
+        
+}
 		return new ViewModel();
 	}
 
 	public function rankingAction()
 	{
+        $user_session = new Container('user');
+        if(!isset( $user_session->idProfile))
+        {
+            return $this->redirect()->toRoute('login', array('action' => 'index'));
+        
+}
 		return new ViewModel();
 	}
 
@@ -64,7 +84,13 @@ class DashboardController extends AbstractActionController
 
 	public function searchAction()
 	{   
-		$request = $this->getRequest();
+		$user_session = new Container('user');
+        if(!isset( $user_session->idProfile))
+        {
+            return $this->redirect()->toRoute('login', array('action' => 'index'));
+        }
+        
+        $request = $this->getRequest();
 		
 		if ($request->isPost())
 		{
