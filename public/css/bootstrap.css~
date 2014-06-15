@@ -326,11 +326,6 @@ a {
   text-decoration: none;
 }
 
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
 a:hover,
 a:focus {
   color: #2a6496;
