@@ -11,13 +11,13 @@
  * file.
  */
 define('DB_NAME', $_ENV['OPENSHIFT_APP_NAME']);
-
+ 
 /** MySQL database username */
 define('DB_USER', $_ENV['OPENSHIFT_MYSQL_DB_USERNAME']);
-
+ 
 /** MySQL database password */
 define('DB_PASSWORD', $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD']);
-
+ 
 /** MySQL hostname */
 define('DB_HOST', $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT']);
 
@@ -26,7 +26,7 @@ define('DB_HOST', $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQ
 return array(
     'db' => array(
 		'driver' => 'Pdo',
-		'dsn' => 'mysql:dbname=php;'.DB_HOST,
+		'dsn' => 'mysql:dbname='.DB_NAME.';'.DB_HOST,
 		'username' => DB_USER,
 		'passoword' => DB_PASSWORD,		
 		'driver_options' => array(
