@@ -17,6 +17,7 @@ return array(
 		'dsn' => 'mysql:dbname=php;host=$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/',
 		'username' => 'admin7kgInEq',
 		'passoword' => 'rLlefA4XhU7S',
+		'dsn' => 'mysql:dbname=php;host=127.11.241.130',
 		'driver_options' => array(
 			PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
 		),
