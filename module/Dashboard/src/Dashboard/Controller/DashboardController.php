@@ -78,11 +78,6 @@ class DashboardController extends AbstractActionController
 
 	public function searchAction()
 	{   
-		$user_session = new Container('user');
-        if(!isset( $user_session->idProfile))
-        {
-            return $this->redirect()->toRoute('login', array('action' => 'index'));
-        }
         
         $request = $this->getRequest();
 		
